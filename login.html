@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | PRIME School System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(45deg, #ee0979, #ff6a00);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-card {
+            width: 400px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            text-align: center;
+            color: white;
+        }
+
+        h2 { margin-bottom: 30px; }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            outline: none;
+            color: white;
+            margin-top: 5px;
+        }
+
+        input::placeholder { color: rgba(255,255,255,0.7); }
+
+        .login {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: white;
+            color: #ee0979;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            transform: scale(1.02);
+            background: rgba(255,255,255,0.9);
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-card">
+        <h2 id="result"></h2>
+        <h2>School Portal</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label>Username</label>
+                <input type="text" placeholder="Enter your ID" required id="usr">
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" placeholder="••••••••" required id="pwd">
+            </div>
+            <input type="button" value="Login" onclick="login()" class="login">
+        </form>
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+    <script>
+        function login(){
+            let u = document.getElementById("usr").value;
+            let p = document.getElementById("pwd").value;
+
+            if(u=="abdullah" && p=="123"){
+                document.getElementById("result").innerHTML="Welcome";
+            }
+            else{
+                document.getElementById("result").innerHTML="Try Again";
+            }
+        }
+    </script>
+</body>
+</html>

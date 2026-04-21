@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore | PRIME School System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            background-attachment: fixed;
+            color: #fff;
+            padding-top: 100px;
+            line-height: 1.6;
+        }
+
+        /* --- Reuse Glass Nav --- */
+        nav {
+            margin-left: 120px;
+            margin-top: 20px;
+            position: fixed;
+            top: 0;
+            width: 80%;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px) saturate(100%);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            z-index: 1000;
+        }
+
+        .nav-links { list-style: none; display: flex; }
+        .nav-links li { margin-left: 30px; }
+        .nav-links a { text-decoration: none; color: white; font-weight: 500; }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 { text-align: center; font-size: 3rem; margin-bottom: 50px; }
+
+        /* --- Visual History Timeline --- */
+        .history-item {
+            display: flex;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .history-item:hover { transform: translateY(-5px); }
+
+        .history-img {
+            width: 40%;
+            background: rgba(255,255,255,0.2);
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .history-text {
+            width: 60%;
+            padding: 40px;
+        }
+
+        .year-tag {
+            background: #fdbb2d;
+            color: #1a2a6c;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        /* --- Info Grid --- */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .info-card h3 {
+            margin-bottom: 15px;
+            color: #fdbb2d;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        td { padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div style="font-weight: 700;">PRIME SCHOOL</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Discover Our Legacy</h1>
+
+        <div class="history-item">
+            <div class="history-img">IMAGE: 2010 FOUNDATION</div>
+            <div class="history-text">
+                <span class="year-tag">Est. 2010</span>
+                <h2 style="margin: 10px 0;">The Humble Beginning</h2>
+                <p>PRIME School System was established with just 50 students and a vision to redefine education. Founded by a group of passionate educators, we started in a small building with big dreams.</p>
+            </div>
+        </div>
+
+        <div class="history-item" style="flex-direction: row-reverse;">
+            <div class="history-img">IMAGE: MODERN CAMPUS</div>
+            <div class="history-text">
+                <span class="year-tag">2018</span>
+                <h2 style="margin: 10px 0;">Expanding Horizons</h2>
+                <p>By 2018, we moved to our current state-of-the-art campus. We introduced digital classrooms and advanced science labs, becoming a leader in modern educational infrastructure.</p>
+            </div>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Our Faculty</h3>
+                <p>Led by <strong>Prof. Arsalan</strong>, our team consists of 50+ certified educators, 10 PhD scholars, and dedicated support staff committed to student success.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>School Timings</h3>
+                <table>
+                    <tr><td>Monday - Thursday</td><td>08:00 AM - 02:00 PM</td></tr>
+                    <tr><td>Friday</td><td>08:00 AM - 12:30 PM</td></tr>
+                    <tr><td>Saturday (Clubs)</td><td>09:00 AM - 12:00 PM</td></tr>
+                    <tr><td>Sunday</td><td>Closed</td></tr>
+                </table>
+            </div>
+
+            <div class="info-card">
+                <h3>Student Life</h3>
+                <p>With over 1,200 students currently enrolled, PRIME is a melting pot of talent. From robotics clubs to national-level sports, our students lead the way.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 50px; opacity: 0.6;">
+        &copy; 2026 PRIME School System | Established 2010
+    </footer>
+
+</body>
+</html>
